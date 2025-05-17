@@ -1,0 +1,470 @@
+@charset "utf-8";
+
+/* main.css */
+main{}
+#main_intro{
+  height:100vh; /* view height */
+  overflow:hidden;
+  position:relative;
+}
+#main_intro > h2{display:none;}
+#main_intro article{
+  position:absolute;
+  width:100%;top:50%;
+  transform:translateY(-80%);
+  z-index:100;
+  text-align:center;
+  color:var(--t-color02);
+}
+#main_intro article > h3 {
+  font-size: 60px;
+  font-weight:bold;
+}
+#main_intro article > p {
+  line-height: 80px;
+  font-size: 16px;
+}
+#main_intro article a{
+  font-size:var(--t-size14);
+  color:var(--t-color02);
+  text-decoration: underline;
+  margin:0px 20px;
+  padding:10px 16px;
+}
+#main_intro article a:first-of-type{
+  background:#006eff;
+}
+
+.next_btn{
+  width:30px;height:30px;
+  border-left:1px solid #fff;
+  border-bottom:1px solid #fff;
+  display:block;
+  transform:rotate(-45deg);
+  position:absolute;z-index:1000;
+  bottom:40px;
+  left:50%;text-indent:-9999px;
+}
+
+#top3, #test, #event, #buy, #cs{
+  margin:150px auto;
+  width:1200px;
+}
+.scroll-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 메인 콘텐츠 공통 제목서식 */
+main section > h2{
+  font-size: 35px;
+  font-weight:bold;
+  text-align:center;
+  color: #333;
+}
+.p01{
+  text-align:center;
+  font-size:var(--t-size16);
+  line-height:50px;
+}
+#top3 .swiper-slide{
+  text-align:center;
+}
+
+.top3{
+  margin-top:50px;
+  padding:20px 0px 10px 0px;
+  position:relative;
+  
+}
+
+/* 슬라이드 서식 */
+.top3 .rank{
+  color:#327186;
+  border:1px solid #327186;
+  padding:6px 30px;
+  border-radius:20px;
+  font-size:var(--t-size14);
+}
+/* 자동차 위 제목 */
+.top3_title{
+  font-size:26px;
+  font-weight: 500;
+  color:#043e96;
+  padding-top:30px;
+}
+/* 자동차 사진 서식 */
+.top3 img{
+  padding:80px 0px;
+  width:400px;
+  transition:0.8s;
+  transition-timing-function: cubic-bezier(0.1, 1.0);
+  transform:scale(0.7);
+}
+.top3 .swiper-slide-active img{ 
+  transform:scale(1.2);
+}
+/* 자동차 상세 내용 서식 */
+.top3 .detail{
+  display:flex;
+  justify-content:center;
+  padding-bottom:60px;
+}
+.top3 .detail li{
+  width:190px;
+  border-right:1px solid #ccc;
+  padding:0px 20px;
+  font-size:16px;
+  line-height: 20px;
+  text-align:left;
+}
+.outer_color, .inner_color{
+  display:inline-block;
+  width:56px;height:40px;
+  text-indent:-9999px;
+  float:left;margin-right:30px;
+}
+.kaki{background:#494b3e;}
+.black{background:#000;}
+.white{background:#fff;border:1px solid #ccc;}
+.orange{background:rgb(190, 86, 0);}
+
+.detail li:last-child{
+  color:#043e96;
+  border-right:none;
+  padding-top:6px;
+}
+
+/* 차량가격정보 */
+.price{
+  font-size:32px;
+  font-weight:bold;
+}
+/* 견적내기 버튼 */
+.btn{
+  font-size:var(--t-size14);
+  border:1px solid #616161;
+  padding:8px 0px;
+  width:150px;
+  background:none;
+  font-weight:bold;
+  transition:0.5s;
+  cursor:pointer;
+}
+.btn:hover{color:var(--t-color02);}
+.swiper-pagination2{
+  text-align:center;
+  transform:translateY(50px);
+}
+.g_btn{width:100px;}
+
+/* 버튼오버시 배경색 */
+.b_btn:hover{background:rgb(52, 52, 201); border: 1px solid rgb(52, 52, 201);}
+.g_btn:hover{background:#616161;}
+
+/* 소개페이지 서식 */
+#intro{
+  text-align:center;
+  position:relative;
+  height:860px;
+  overflow: hidden;
+}
+#intro h2, .intro_title_left, .intro_title_right, .g_btn{
+  position:absolute;
+  z-index:2;
+}
+#intro video{
+  position:absolute;
+  left:0px;top:0px;
+  z-index:1;
+}
+
+#intro h2{
+  width:100%;
+  text-align:center;
+  margin:80px 0px;
+}
+.g_btn{
+  bottom:20px;
+  transform:translateX(-50%);
+}
+.intro_title_left, .intro_title_right{
+  font-size: 30px;
+  font-weight:bold;
+  line-height:40px;
+}
+.intro_title_left{
+  text-align:left;
+  left:300px;top:150px;
+}
+.intro_title_right{
+  text-align:right;
+  right:100px;
+  bottom:150px;;
+}
+
+/* 시승신청 */
+#test {
+  text-align: center;
+  background-image: url(../images/bg1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 60px 20px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 어두운 배경 위에 반투명 검은 오버레이 */
+/* 메인 섹션 */
+#test {
+  border: 1px solid #f1f1f1;
+  border-radius: 20px;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  overflow: hidden;
+}
+
+
+
+#test .p01 {
+  font-size: var(--t-size16);
+  color: #555;
+  margin-bottom: 60px;
+}
+
+/* 카드 래핑 */
+.drive-card-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* 카드 공통 스타일 */
+#test article {
+  width: 440px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease;
+}
+#test article:hover {
+  transform: translateY(-8px);
+}
+
+/* 카드 내부 타이틀 */
+#test article h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* 본문 */
+#test article p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom:48px;
+}
+
+/* 강조 텍스트 */
+.t_drive_p2 {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 버튼 스타일 */
+.test_d_btn, .test_d_btn01 {
+  display: inline-block;
+  background: #00c6ad;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-right: 12px;
+  transition: all 0.3s ease;
+}
+.test_d_btn01 {
+  background: #e1e1e1;
+}
+.test_d_btn:hover {
+  background: #00b3a0;
+}
+.test_d_btn01:hover {
+  background: #455255;
+  color: #fff;
+}
+
+
+@media (max-width: 1024px) {
+  .drive-card-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  #test article {
+    width: 90%;
+  }
+}
+
+.test_d_btn { 
+  background-color: #fff; 
+  color: var(--bg-color02);
+  border: 1px solid var(--bg-color02);
+  line-height: 30px;
+  padding: 10px 60px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.test_d_btn:hover {
+  background-color: #fff; 
+  color: var(--bg-color02);
+  border: 1px solid var(--bg-color02);
+  background-color: var(--bg-color02);
+  color: #fff;
+}
+
+.test_d_btn01{
+  color:#333;
+  position:relative;top:16px;
+  display:block;
+}
+.t_drive_p2{
+  transform:translateY(50px);
+}
+.test_drive_r .t_drive_p2{
+  transform:translateY(62px);
+}
+
+/* 이벤트 배너 */
+#event{
+  background:#f2f6ff;
+  width:100%;height:500px;
+  padding : 60px 10px
+}
+.e_banner{
+  width:1200px;height:440px;
+  margin:40px auto 0px auto;
+  position:relative;
+  overflow:hidden;
+}
+.e_banner > ul{
+  display:flex;
+  width:4800px;
+  position:absolute;
+}
+.e_banner .ctrl_btn{
+  width:280px;
+  display:flex;
+  justify-content:space-around;
+  position:absolute;
+  bottom:90px;left:50%;
+  transform:translateX(-50%);
+}
+.e_banner .ctrl_btn span{
+  width:60px;height:8px;
+  background:#ccc;
+  display:inline-block;
+}
+.act01{background:#333 !important;}
+
+/*캐스퍼 구매안내*/
+/* 전체 섹션 */
+#buy {
+  text-align: center;
+}
+
+#buy .p01 {
+  font-size: var(--t-size16);
+  color: #555;
+  margin-bottom: 44px;
+}
+
+#buy h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+#buy .t_color {
+  color: #0078ff; /* 현대 느낌 나는 포인트 블루 */
+}
+
+/* 리스트 */
+#buy ul.buy_steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0;
+}
+
+#buy ul.buy_steps li.buy_item {
+  background: #fff;
+  width: 320px;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+#buy ul.buy_steps li.buy_item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 항목 제목 및 내용 */
+#buy ul li h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+#buy ul li img {
+  width: 50px;
+  margin-bottom: 16px;
+}
+
+#buy ul li .p03 {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 영상 */
+#buy .video_wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+#buy iframe {
+  width: 100%;
+  height: 560px;
+  border: none;
+}
